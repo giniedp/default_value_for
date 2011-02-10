@@ -56,6 +56,8 @@ class User < ActiveRecord::Base
 end
 
 class Number < ActiveRecord::Base
+  belongs_to :user
+  accepts_nested_attributes_for :user
 end
 
 class DefaultValuePluginTest < Test::Unit::TestCase
